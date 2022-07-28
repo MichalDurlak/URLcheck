@@ -16,8 +16,8 @@
 
 
 	<body>
-<!--	<section class="ftco-section">-->
-<!--		<div class="container">-->
+	<section class="ftco-section">
+		<div class="container">
 			<div class="row justify-content-center">
 				<div class="col-md-6 text-center mb-5">
 					<h2 class="heading-section"> Sprawdzana strona: <br/> <td th:text="${urlModel.fullUrlLink}"> [Strona] </td> </h2>
@@ -26,63 +26,72 @@
 <!--			<div class="row">-->
 <!--				<div class="col-md-12">-->
 <!--					<div class="table-wrap">-->
-<!--						<table class="table table-bordered table-dark table-hover">-->
-<!--						  <thead>-->
-<!--&lt;!&ndash;HEADERS&ndash;&gt;-->
-<!--						    <tr>-->
-<!--						      <th>#</th>-->
-<!--						      <th>Czy bezpieczna</th>-->
-<!--						      <th>Strona</th>-->
-<!--						      <th>Ilość punktów</th>-->
-<!--						    </tr>-->
-<!--						  </thead>-->
-<!--&lt;!&ndash;			&ndash;&gt;-->
-<!--						  <tbody>-->
-<!--&lt;!&ndash;FIRST RECORD Ipqualityscore&ndash;&gt;-->
-<!--						    <tr>-->
-<!--						      <th scope="row">1</th>-->
+
+<!--TABLE FOR ALL RESULTS-->
+						<table class="table table-bordered table-dark table-hover">
+<!--HEADERS-->
+						  <thead>
+						    <tr>
+						      <th>#</th>
+						      <th>Czy bezpieczna</th>
+						      <th>Strona</th>
+						      <th>Ilość punktów</th>
+						    </tr>
+						  </thead>
+
+
+
+						  <tbody>
+<!--START 1st RECORD Ipqualityscore-->
+						    <tr>
+						      <th scope="row">1</th>
 <!--								<td> <span th:utext="${urlModel.isSecureByIpqualityscoreScore}"> </span></td>-->
 <!--								<td><button type="button" class="btn btn-link" data-bs-toggle="modal" data-bs-target="#ipqualityscoreModal">ipqualityscore.com</button></td>-->
 <!--								<td> <span th:utext="${urlModel.ipqualityscoreScore}"> </span>  pkt</td>-->
-<!--						    </tr>-->
-<!--&lt;!&ndash;			&ndash;&gt;-->
-<!--&lt;!&ndash;SECOND RECORD virustotal&ndash;&gt;-->
-<!--						    <tr>-->
-<!--						      <th scope="row">2</th>-->
+						    </tr>
+<!--STOP FIRST RECORD Ipqualityscore-->
+
+<!--START 2nd RECORD virustotal-->
+						    <tr>
+						      <th scope="row">2</th>
 <!--								<td> <span th:utext="${virustotalModel.isSecureByVirustotal}"> </span></td>-->
 <!--								<td><button type="button" class="btn btn-link" data-bs-toggle="modal" data-bs-target="#virustotalModal">virustotal.com</button></td>-->
 <!--								<td> <span th:utext="${virustotalModel.virustotalScore}"> </span>  pkt</td>-->
-<!--						    </tr>-->
-<!--&lt;!&ndash;			&ndash;&gt;-->
-<!--&lt;!&ndash;THIRD RECORD exerra&ndash;&gt;-->
-<!--						    <tr>-->
-<!--						      <th scope="row">3</th>-->
+						    </tr>
+<!--STOP 2nd RECORD virustotal-->
+
+<!--START 3rd RECORD exerra-->
+						    <tr>
+						      <th scope="row">3</th>
 <!--								<td> <span th:utext="${exerraModel.isScam}"> </span></td>-->
 <!--								<td><a href="https://rapidapi.com/Amiichu/api/exerra-phishing-check"  class="btn btn-link" >exerra</a></td>-->
 <!--								<td> <span th:utext="${exerraModel.exerraScore}"> </span>  pkt</td>-->
-<!--						    </tr>-->
-<!--&lt;!&ndash;			&ndash;&gt;-->
-<!--&lt;!&ndash;FOURTH RECORD phisherman&ndash;&gt;-->
-<!--							<tr>-->
-<!--								<th scope="row">4</th>-->
+						    </tr>
+<!--STOP 3rd RECORD exerra-->
+
+<!--START 4th RECORD phisherman-->
+							<tr>
+								<th scope="row">4</th>
 <!--								<td> <span th:utext="${phishermanModel.phishermanIsSecure}"> </span></td>-->
 <!--								<td><button type="button" class="btn btn-link" data-bs-toggle="modal" data-bs-target="#phishermanModal">phisherman.gg</button></td>-->
 <!--								<td> <span th:utext="${phishermanModel.phishermanScore}"> </span>  pkt</td>-->
-<!--							</tr>-->
-<!--&lt;!&ndash;			&ndash;&gt;-->
-<!--&lt;!&ndash;FIFTH RECORD (SUM UP)&ndash;&gt;-->
-<!--						    <tr>-->
-<!--						      <th scope="row">5</th>-->
+							</tr>
+<!--STOP 4th RECORD phisherman-->
+
+<!--START 5th RECORD (SUM UP)-->
+						    <tr>
+						      <th scope="row">5</th>
 <!--								 <td colspan="3" class='summary'> ŚREDNIA ILOŚĆ PUNKTÓW: <span th:utext="${urlModel.urlGeneralScore}"> </span>  </td>-->
-<!--						    </tr>-->
-<!--&lt;!&ndash;			&ndash;&gt;-->
-<!--						  </tbody>-->
-<!--						</table>-->
+						    </tr>
+<!--STOP 5th RECORD (SUM UP)-->
+
+						  </tbody>
+						</table>
 <!--					</div>-->
 <!--				</div>-->
 <!--			</div>-->
-<!--		</div>-->
-<!--	</section>-->
+		</div>
+	</section>
 
 <!--BUTTON TO RETURN TO INDEX SITE-->
 	<div class="col-md-12 text-center">
