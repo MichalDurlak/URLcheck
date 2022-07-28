@@ -29,7 +29,7 @@ jobs:
       with:
         image: michaldurlak/urlcheck
         registry: docker.io
-        tags: test
+        tags: v1, latest
         username: ${{ secrets.DOCKER_USERNAME }}
         password: ${{ secrets.DOCKER_PASSWORD }}
     
