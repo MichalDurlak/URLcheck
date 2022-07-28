@@ -54,16 +54,16 @@
 <!--START 2nd RECORD virustotal-->
 						    <tr>
 						      <th scope="row">2</th>
-<!--								<td> <span th:utext="${virustotalModel.isSecureByVirustotal}"> </span></td>-->
-<!--								<td><button type="button" class="btn btn-link" data-bs-toggle="modal" data-bs-target="#virustotalModal">virustotal.com</button></td>-->
-<!--								<td> <span th:utext="${virustotalModel.virustotalScore}"> </span>  pkt</td>-->
+								<td> <span th:utext="${urlModel.descriptionVirustotal}"> </span></td>
+								<td><button type="button" class="btn btn-link" data-bs-toggle="modal" data-bs-target="#virustotalModal">virustotal.com</button></td>
+								<td> <span th:utext="${urlModel.pointsVirustotal}"> </span>  pkt</td>
 						    </tr>
 <!--STOP 2nd RECORD virustotal-->
 
 <!--START 3rd RECORD exerra-->
 						    <tr>
 						      <th scope="row">3</th>
-								<td> <span th:utext="${exerraModel.isScamFromExerra}"> </span></td>
+								<td> <span th:utext="${urlModel.descriptionExerra}"> </span></td>
 								<td><a href="https://rapidapi.com/Amiichu/api/exerra-phishing-check"  class="btn btn-link" >exerra</a></td>
 								<td> <span th:utext="${urlModel.pointsExerra}"> </span>  pkt</td>
 						    </tr>
@@ -145,33 +145,33 @@
 
 
 		<!-- Virustotal.com MODAL -->
-<!--		<div class="modal" id="virustotalModal">-->
-<!--			<div class="modal-dialog">-->
-<!--				<div class="modal-content">-->
+		<div class="modal" id="virustotalModal">
+			<div class="modal-dialog">
+				<div class="modal-content">
 
-<!--					&lt;!&ndash; Modal Header &ndash;&gt;-->
-<!--					<div class="modal-header">-->
-<!--						<h4 class="modal-title">Wyniki ze strony: <b>virustotal.com</b></h4>-->
-<!--						<button type="button" class="btn-close" data-bs-dismiss="modal"></button>-->
-<!--					</div>-->
+					<!-- Modal Header -->
+					<div class="modal-header">
+						<h4 class="modal-title">Wyniki ze strony: <b>virustotal.com</b></h4>
+						<button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+					</div>
 
-<!--					&lt;!&ndash; Modal body &ndash;&gt;-->
-<!--					<div class="modal-body">-->
+					<!-- Modal body -->
+					<div class="modal-body">
 
-<!--						<a th:href="${virustotalModel.linkToResultsSite}"> Link do skanowania </a> <br/>-->
-<!--						Wyników skanowania -> <b><span th:utext="${virustotalModel.totalResults}"> </span> </b> <br/>-->
-<!--						Ilośc potencjalnie znalezionych problemów -> <b><span th:utext="${virustotalModel.positives}"> </span> </b> <br/>-->
+						<a th:href="${virustotalModel.permalinkFromVirustotal}"> Link do skanowania </a> <br/>
+						Wyników skanowania -> <b><span th:utext="${virustotalModel.totalFromVirustotal}"> </span> </b> <br/>
+						Ilość potencjalnie znalezionych problemów -> <b><span th:utext="${virustotalModel.positivesFromVirustotal}"> </span> </b> <br/>
 
-<!--					</div>-->
+					</div>
 
-<!--					&lt;!&ndash; Modal footer &ndash;&gt;-->
-<!--					<div class="modal-footer">-->
-<!--						<button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>-->
-<!--					</div>-->
+					<!-- Modal footer -->
+					<div class="modal-footer">
+						<button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+					</div>
 
-<!--				</div>-->
-<!--			</div>-->
-<!--		</div>-->
+				</div>
+			</div>
+		</div>
 		<!-- Central Modal Medium -->
 
 		<!-- Phisherman.gg MODAL -->

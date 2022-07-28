@@ -39,4 +39,11 @@ public class ExerraService {
         }
     }
 
+    public static void setDescriptionExerra(UrlModel urlModel) {
+        if(urlModel.getPointsExerra() == 100){
+            urlModel.setDescriptionExerra("BEZPIECZNA");
+        } else {
+            urlModel.setDescriptionExerra("NIEBEZPIECZNA");
+        }
+    }
 }

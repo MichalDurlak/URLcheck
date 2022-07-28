@@ -16,6 +16,11 @@ public class UrlModel {
 
     //Exerra
     private int pointsExerra;
+    private String descriptionExerra;
+
+    //Virustotal
+    private String pointsVirustotal;
+    private String descriptionVirustotal;
 
 
 
