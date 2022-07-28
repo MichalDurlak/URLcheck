@@ -25,7 +25,6 @@ jobs:
     - name: Build with Maven
       run: mvn -B package --file pom.xml
       env:
-        CI: true
         API_EXERRA: ${{ secrets.API_EXERRA }}
     - name: Build & push Docker image to public repo
       uses: mr-smithers-excellent/docker-build-push@v5
