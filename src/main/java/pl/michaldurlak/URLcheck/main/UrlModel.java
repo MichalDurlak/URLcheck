@@ -1,4 +1,4 @@
-package pl.michaldurlak.URLcheck.model;
+package pl.michaldurlak.URLcheck.main;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -13,6 +13,9 @@ public class UrlModel {
     private String prefixUrl;
     // full link (with prefix)
     private String fullUrlLink;
+
+    //Exerra
+    private int pointsExerra;
 
 
 
