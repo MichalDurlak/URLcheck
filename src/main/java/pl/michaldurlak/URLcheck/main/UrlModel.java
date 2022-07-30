@@ -22,6 +22,10 @@ public class UrlModel {
     private String pointsVirustotal;
     private String descriptionVirustotal;
 
+    //Ipqualityscore
+    private String pointsIpqualityscore;
+    private String descriptionIpqualityscore;
+
 
 
     // get Link with prefix
