@@ -5,13 +5,15 @@ import pl.michaldurlak.URLcheck.exerra.ExerraModel;
 import pl.michaldurlak.URLcheck.exerra.ExerraService;
 import pl.michaldurlak.URLcheck.ipqualityscore.IpqualityscoreModel;
 import pl.michaldurlak.URLcheck.ipqualityscore.IpqualityscoreService;
+import pl.michaldurlak.URLcheck.phisherman.PhishermanModel;
+import pl.michaldurlak.URLcheck.phisherman.PhishermanService;
 import pl.michaldurlak.URLcheck.virustotal.VirustotalModel;
 import pl.michaldurlak.URLcheck.virustotal.VirustotalService;
 
 @Service
 public class MainService {
 
-    public static void setUpEachSource(UrlModel urlModel, ExerraModel exerraModel, VirustotalModel virustotalModel, IpqualityscoreModel ipqualityscoreModel){
+    public static void setUpEachSource(UrlModel urlModel, ExerraModel exerraModel, VirustotalModel virustotalModel, IpqualityscoreModel ipqualityscoreModel, PhishermanModel phishermanModel){
 
         //Exerra
         setUpExerraSource(urlModel,exerraModel);
@@ -22,6 +24,8 @@ public class MainService {
         //Ipqualityscore
         setUpIpqualityscoreSource(urlModel, ipqualityscoreModel);
 
+        //Phisherman
+        setUpPhishermanSource(urlModel, phishermanModel);
     }
 
     private static void setUpExerraSource(UrlModel urlModel, ExerraModel exerraModel){
@@ -68,6 +72,24 @@ public class MainService {
             IpqualityscoreService.setModelIpqualityscoreNoResponse(ipqualityscoreModel);
             IpqualityscoreService.setPointsIpqualityscoreAndDescriptionNoResponse(urlModel);
         }
+    }
+
+    private static void setUpPhishermanSource(UrlModel urlModel, PhishermanModel phishermanModel){
+        // Set downloaded result to variable
+        PhishermanService.setResultPhisherman(urlModel, phishermanModel);
+        // Set classification
+        PhishermanService.setClassificationPhisherman(urlModel, phishermanModel);
+        // Try to set phishermanModel
+        PhishermanService.setModelPhisherman(urlModel, phishermanModel);
+
+        //If Classification is unknown
+        if(phishermanModel.getClassificationInfoFromPhisherman().equals("unknown")){
+            PhishermanService.setPointsPhishermanAndDescriptionNoResponse(urlModel);
+        } else {
+            PhishermanService.setPointsPhisherman(urlModel, phishermanModel);
+            PhishermanService.setDescriptionPhisherman(urlModel);
+        }
+
     }
 
 
