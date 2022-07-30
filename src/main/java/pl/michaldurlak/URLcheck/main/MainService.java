@@ -1,22 +1,26 @@
 package pl.michaldurlak.URLcheck.main;
 
-import lombok.Setter;
 import org.springframework.stereotype.Service;
 import pl.michaldurlak.URLcheck.exerra.ExerraModel;
 import pl.michaldurlak.URLcheck.exerra.ExerraService;
+import pl.michaldurlak.URLcheck.ipqualityscore.IpqualityscoreModel;
+import pl.michaldurlak.URLcheck.ipqualityscore.IpqualityscoreService;
 import pl.michaldurlak.URLcheck.virustotal.VirustotalModel;
 import pl.michaldurlak.URLcheck.virustotal.VirustotalService;
 
 @Service
 public class MainService {
 
-    public static void setUpEachSource(UrlModel urlModel, ExerraModel exerraModel, VirustotalModel virustotalModel){
+    public static void setUpEachSource(UrlModel urlModel, ExerraModel exerraModel, VirustotalModel virustotalModel, IpqualityscoreModel ipqualityscoreModel){
 
         //Exerra
         setUpExerraSource(urlModel,exerraModel);
 
         //Virustotal
         setUpVirustotalSource(urlModel, virustotalModel);
+
+        //Ipqualityscore
+        setUpIpqualityscoreSource(urlModel, ipqualityscoreModel);
 
     }
 
@@ -46,6 +50,23 @@ public class MainService {
         } else {
             VirustotalService.setModelVirustotalNoResponse(virustotalModel);
             VirustotalService.setPointsVirustotalAndDescriptionNoResponse(urlModel);
+        }
+    }
+
+    private static void setUpIpqualityscoreSource(UrlModel urlModel, IpqualityscoreModel ipqualityscoreModel){
+        // Set downloaded result to variable
+        IpqualityscoreService.setResultIpqualityscore(urlModel, ipqualityscoreModel);
+        // Set success
+        IpqualityscoreService.setSuccessIpqualityscore(ipqualityscoreModel);
+
+        // If success is true
+        if(ipqualityscoreModel.isSuccessFromVirustotal() == true){
+            IpqualityscoreService.setModelIpqualityscore(ipqualityscoreModel);
+            IpqualityscoreService.setPointsIpqualityscore(urlModel, ipqualityscoreModel);
+            IpqualityscoreService.setDescriptionIpqualityscore(urlModel);
+        } else {
+            IpqualityscoreService.setModelIpqualityscoreNoResponse(ipqualityscoreModel);
+            IpqualityscoreService.setPointsIpqualityscoreAndDescriptionNoResponse(urlModel);
         }
     }
 

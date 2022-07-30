@@ -45,9 +45,9 @@
 <!--START 1st RECORD Ipqualityscore-->
 						    <tr>
 						      <th scope="row">1</th>
-<!--								<td> <span th:utext="${urlModel.isSecureByIpqualityscoreScore}"> </span></td>-->
-<!--								<td><button type="button" class="btn btn-link" data-bs-toggle="modal" data-bs-target="#ipqualityscoreModal">ipqualityscore.com</button></td>-->
-<!--								<td> <span th:utext="${urlModel.ipqualityscoreScore}"> </span>  pkt</td>-->
+								<td> <span th:utext="${urlModel.descriptionIpqualityscore}"> </span></td>
+								<td><button type="button" class="btn btn-link" data-bs-toggle="modal" data-bs-target="#ipqualityscoreModal">ipqualityscore.com</button></td>
+								<td> <span th:utext="${urlModel.pointsIpqualityscore}"> </span>  pkt</td>
 						    </tr>
 <!--STOP FIRST RECORD Ipqualityscore-->
 
@@ -103,46 +103,40 @@
 		<!-- Central Modal Medium -->
 
 
-		<!-- Ipqualityscore.com MODAL -->
-<!--		<div class="modal" id="ipqualityscoreModal">-->
-<!--			<div class="modal-dialog">-->
-<!--				<div class="modal-content">-->
+<!--START IPQUALITYSCORE.COM BOX-->
+		<div class="modal" id="ipqualityscoreModal">
+			<div class="modal-dialog">
+				<div class="modal-content">
 
-<!--					&lt;!&ndash; Modal Header &ndash;&gt;-->
-<!--					<div class="modal-header">-->
-<!--						<h4 class="modal-title">Wyniki ze strony: <b>ipqualityscore.com</b></h4>-->
-<!--						<button type="button" class="btn-close" data-bs-dismiss="modal"></button>-->
-<!--					</div>-->
+					<!-- Box top -->
+					<div class="modal-header">
+						<h4 class="modal-title">Wyniki ze strony: <b>ipqualityscore.com</b></h4>
+						<button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+					</div>
 
-<!--					&lt;!&ndash; Modal body &ndash;&gt;-->
-<!--					<div class="modal-body">-->
-<!--&lt;!&ndash;						Wiadomość -> <b><span th:utext="${ipqualityscoreModel.message}"> </span> </b> <br/>&ndash;&gt;-->
-<!--						Sprawdzana domena -> <b><span th:utext="${ipqualityscoreModel.domain}"> </span> </b> <br/>-->
-<!--						Ip Address -> <b><span th:utext="${ipqualityscoreModel.ipAddress}"> </span> </b> <br/>-->
-<!--						Kategoria strony -> <b><span th:utext="${ipqualityscoreModel.category}"> </span>  </b><br/>-->
-<!--&lt;!&ndash;						Status odpowiedzi -> <b><span th:utext="${ipqualityscoreModel.statusCode}"> </span> </b> <br/>&ndash;&gt;-->
-<!--						Punkty ryzyka -> <b><span th:utext="${ipqualityscoreModel.riskScore}"> </span> </b> <br/>-->
-<!--						Czy strona posiada ważne rekordy DNS -> <b><span th:utext="${ipqualityscoreModel.isDnsValid}"> </span> </b> <br/>-->
-<!--						Czy domena jest zaparkowana jako do sprzedania -> <b><span th:utext="${ipqualityscoreModel.isParking}"> </span> </b> <br/>-->
-<!--						Czy strona powiązana jest ze spamem -> <b><span th:utext="${ipqualityscoreModel.isSpamming}"> </span> </b> <br/>-->
-<!--						Czy strona powiązana jest z malware lub wirusami -> <b><span th:utext="${ipqualityscoreModel.isMalware}"> </span> </b> <br/>-->
-<!--						Czy strona powiązana jest z wyłudzaniem danych -> <b><span th:utext="${ipqualityscoreModel.isPhishing}"> </span> </b> <br/>-->
-<!--						Czy strona jest podejrzewana jako oszustwo -> <b><span th:utext="${ipqualityscoreModel.isSuspicious}"> </span> </b> <br/>-->
-<!--						Czy strona zawiera treść dla dorosłych -> <b><span th:utext="${ipqualityscoreModel.isAdult}"> </span> </b> <br/>-->
-<!--&lt;!&ndash;						Czy zapytanie zostało poprawnie obsłużone -> <b><span th:utext="${ipqualityscoreModel.isSuccess}"> </span> </b> <br/>&ndash;&gt;-->
-<!--						Czy podejrzewa się, że ta domena jest niebezpieczna z powodu phishingu, złośliwego oprogramowania, spamowania lub nadużyć -> <b><span th:utext="${ipqualityscoreModel.isUnsafe}"> </span> </b> <br/>-->
-<!--					</div>-->
+					<!-- Box middle -->
+					<div class="modal-body">
+						Ip Address -> <b><span th:utext="${ipqualityscoreModel.ipAddressFromVirustotal}"> </span> </b> <br/>
+						Kategoria strony -> <b><span th:utext="${ipqualityscoreModel.categoryFromVirustotal}"> </span>  </b><br/>
+						Ranga domeny (im więcej tym lepiej) -> <b><span th:utext="${ipqualityscoreModel.domainRankFromVirustotal}"> </span>  </b><br/>
+						Punkty ryzyka -> <b><span th:utext="${ipqualityscoreModel.riskScoreFromVirustotal}"> </span> </b> <br/>
+						Czy strona posiada ważne rekordy DNS -> <b><span th:utext="${ipqualityscoreModel.dnsValidFromVirustotal}"> </span> </b> <br/>
+						Czy domena jest zaparkowana jako do sprzedania -> <b><span th:utext="${ipqualityscoreModel.parkingFromVirustotal}"> </span> </b> <br/>
+						Czy strona powiązana jest ze spamem -> <b><span th:utext="${ipqualityscoreModel.spammingFromVirustotal}"> </span> </b> <br/>
+						Czy strona powiązana jest z malware lub wirusami -> <b><span th:utext="${ipqualityscoreModel.malwareFromVirustotal}"> </span> </b> <br/>
+						Czy strona powiązana jest z wyłudzaniem danych -> <b><span th:utext="${ipqualityscoreModel.phishingFromVirustotal}"> </span> </b> <br/>
+						Czy strona jest podejrzewana jako oszustwo -> <b><span th:utext="${ipqualityscoreModel.suspiciousFromVirustotal}"> </span> </b> <br/>
+						Czy strona zawiera treść dla dorosłych -> <b><span th:utext="${ipqualityscoreModel.adultFromVirustotal}"> </span> </b> <br/>
+					</div>
 
-<!--					&lt;!&ndash; Modal footer &ndash;&gt;-->
-<!--					<div class="modal-footer">-->
-<!--						<button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>-->
-<!--					</div>-->
-
-<!--				</div>-->
-<!--			</div>-->
-<!--		</div>-->
-		<!-- Central Modal Medium -->
-
+					<!-- Box footer -->
+					<div class="modal-footer">
+						<button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+					</div>
+				</div>
+			</div>
+		</div>
+<!--STOP IPQUALITYSCORE.COM BOX-->
 
 		<!-- Virustotal.com MODAL -->
 		<div class="modal" id="virustotalModal">
