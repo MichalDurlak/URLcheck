@@ -16,91 +16,91 @@
 
 
 	<body>
-	<section class="ftco-section">
-		<div class="container">
-			<div class="row justify-content-center">
-				<div class="col-md-6 text-center mb-5">
-					<h2 class="heading-section"> Sprawdzana strona: <br/> <td th:text="${urlModel.fullUrlLink}"> [Strona] </td> </h2>
+		<section class="ftco-section">
+			<div class="container">
+				<div class="row justify-content-center">
+					<div class="col-md-6 text-center mb-5">
+						<h2 class="heading-section"> Sprawdzana strona: <br/> <td th:text="${urlModel.fullUrlLink}"> [Strona] </td> </h2>
+					</div>
 				</div>
-			</div>
-<!--			<div class="row">-->
-<!--				<div class="col-md-12">-->
-<!--					<div class="table-wrap">-->
+				<div class="row">
+					<div class="col-md-12">
+						<div class="table-wrap">
 
 <!--TABLE FOR ALL RESULTS-->
-						<table class="table table-bordered table-dark table-hover">
+							<table class="table table-bordered table-dark table-hover">
 <!--HEADERS-->
-						  <thead>
-						    <tr>
-						      <th>#</th>
-						      <th>Czy bezpieczna</th>
-						      <th>Strona</th>
-						      <th>Ilość punktów</th>
-						    </tr>
-						  </thead>
+							  <thead>
+								<tr>
+								  <th>#</th>
+								  <th>Czy bezpieczna</th>
+								  <th>Strona</th>
+								  <th>Ilość punktów</th>
+								</tr>
+							  </thead>
 
 
 
-						  <tbody>
+							  <tbody>
 <!--START 1st RECORD Ipqualityscore-->
-						    <tr>
-						      <th scope="row">1</th>
-								<td> <span th:utext="${urlModel.descriptionIpqualityscore}"> </span></td>
-								<td><button type="button" class="btn btn-link" data-bs-toggle="modal" data-bs-target="#ipqualityscoreModal">ipqualityscore.com</button></td>
-								<td> <span th:utext="${urlModel.pointsIpqualityscore}"> </span>  pkt</td>
-						    </tr>
+								<tr>
+								  <th scope="row">1</th>
+									<td> <span th:utext="${urlModel.descriptionIpqualityscore}"> </span></td>
+									<td><button type="button" class="btn btn-link" data-bs-toggle="modal" data-bs-target="#ipqualityscoreModal">ipqualityscore.com</button></td>
+									<td> <span th:utext="${urlModel.pointsIpqualityscore}"> </span>  pkt</td>
+								</tr>
 <!--STOP FIRST RECORD Ipqualityscore-->
 
 <!--START 2nd RECORD virustotal-->
-						    <tr>
-						      <th scope="row">2</th>
-								<td> <span th:utext="${urlModel.descriptionVirustotal}"> </span></td>
-								<td><button type="button" class="btn btn-link" data-bs-toggle="modal" data-bs-target="#virustotalModal">virustotal.com</button></td>
-								<td> <span th:utext="${urlModel.pointsVirustotal}"> </span>  pkt</td>
-						    </tr>
+								<tr>
+								  <th scope="row">2</th>
+									<td> <span th:utext="${urlModel.descriptionVirustotal}"> </span></td>
+									<td><button type="button" class="btn btn-link" data-bs-toggle="modal" data-bs-target="#virustotalModal">virustotal.com</button></td>
+									<td> <span th:utext="${urlModel.pointsVirustotal}"> </span>  pkt</td>
+								</tr>
 <!--STOP 2nd RECORD virustotal-->
 
 <!--START 3rd RECORD exerra-->
-						    <tr>
-						      <th scope="row">3</th>
-								<td> <span th:utext="${urlModel.descriptionExerra}"> </span></td>
-								<td><a href="https://rapidapi.com/Amiichu/api/exerra-phishing-check"  class="btn btn-link" >exerra</a></td>
-								<td> <span th:utext="${urlModel.pointsExerra}"> </span>  pkt</td>
-						    </tr>
+								<tr>
+								  <th scope="row">3</th>
+									<td> <span th:utext="${urlModel.descriptionExerra}"> </span></td>
+									<td><a href="https://rapidapi.com/Amiichu/api/exerra-phishing-check"  class="btn btn-link" >exerra</a></td>
+									<td> <span th:utext="${urlModel.pointsExerra}"> </span>  pkt</td>
+								</tr>
 <!--STOP 3rd RECORD exerra-->
 
 <!--START 4th RECORD phisherman-->
-							<tr>
-								<th scope="row">4</th>
-<!--								<td> <span th:utext="${phishermanModel.phishermanIsSecure}"> </span></td>-->
-<!--								<td><button type="button" class="btn btn-link" data-bs-toggle="modal" data-bs-target="#phishermanModal">phisherman.gg</button></td>-->
-<!--								<td> <span th:utext="${phishermanModel.phishermanScore}"> </span>  pkt</td>-->
-							</tr>
+								<tr>
+									<th scope="row">4</th>
+									<td> <span th:utext="${urlModel.descriptionPhisherman}"> </span></td>
+									<td><button type="button" class="btn btn-link" data-bs-toggle="modal" data-bs-target="#phishermanModal">phisherman.gg</button></td>
+									<td> <span th:utext="${urlModel.pointsPhisherman}"> </span>  pkt</td>
+								</tr>
 <!--STOP 4th RECORD phisherman-->
 
 <!--START 5th RECORD (SUM UP)-->
-						    <tr>
-						      <th scope="row">5</th>
+<!--						    <tr>-->
+<!--						      <th scope="row">5</th>-->
 <!--								 <td colspan="3" class='summary'> ŚREDNIA ILOŚĆ PUNKTÓW: <span th:utext="${urlModel.urlGeneralScore}"> </span>  </td>-->
-						    </tr>
+<!--						    </tr>-->
 <!--STOP 5th RECORD (SUM UP)-->
 
-						  </tbody>
-						</table>
-<!--					</div>-->
-<!--				</div>-->
-<!--			</div>-->
-		</div>
-	</section>
+							  </tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
 
 <!--BUTTON TO RETURN TO INDEX SITE-->
-	<div class="col-md-12 text-center">
-		<a href="/" class="btn btn-secondary" role="button">Sprawdź kolejną stronę</a>
+		<div class="col-md-12 text-center">
+			<a href="/" class="btn btn-secondary" role="button">Sprawdź kolejną stronę</a>
 
 
 
 
-		<!-- Central Modal Medium -->
+<!--START SETTING OF BOXES -->
 
 
 <!--START IPQUALITYSCORE.COM BOX-->
@@ -138,18 +138,18 @@
 		</div>
 <!--STOP IPQUALITYSCORE.COM BOX-->
 
-		<!-- Virustotal.com MODAL -->
+<!--START Virustotal.com MODAL -->
 		<div class="modal" id="virustotalModal">
 			<div class="modal-dialog">
 				<div class="modal-content">
 
-					<!-- Modal Header -->
+					<!-- Box top -->
 					<div class="modal-header">
 						<h4 class="modal-title">Wyniki ze strony: <b>virustotal.com</b></h4>
 						<button type="button" class="btn-close" data-bs-dismiss="modal"></button>
 					</div>
 
-					<!-- Modal body -->
+					<!-- Box middle -->
 					<div class="modal-body">
 
 						<a th:href="${virustotalModel.permalinkFromVirustotal}"> Link do skanowania </a> <br/>
@@ -158,7 +158,7 @@
 
 					</div>
 
-					<!-- Modal footer -->
+					<!-- Box footer -->
 					<div class="modal-footer">
 						<button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
 					</div>
@@ -166,54 +166,55 @@
 				</div>
 			</div>
 		</div>
-		<!-- Central Modal Medium -->
+<!--STOP Virustotal.com MODAL -->
 
-		<!-- Phisherman.gg MODAL -->
-<!--		<div class="modal" id="phishermanModal">-->
-<!--			<div class="modal-dialog">-->
-<!--				<div class="modal-content">-->
+<!--START Phisherman.gg BOX -->
+		<div class="modal" id="phishermanModal">
+			<div class="modal-dialog">
+				<div class="modal-content">
 
-<!--					&lt;!&ndash; Modal Header &ndash;&gt;-->
-<!--					<div class="modal-header">-->
-<!--						<h4 class="modal-title">Wyniki ze strony: <b>phisherman.gg</b></h4>-->
-<!--						<button type="button" class="btn-close" data-bs-dismiss="modal"></button>-->
-<!--					</div>-->
+					<!-- Box top -->
+					<div class="modal-header">
+						<h4 class="modal-title">Wyniki ze strony: <b>phisherman.gg</b></h4>
+						<button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+					</div>
 
-<!--					&lt;!&ndash; Modal body &ndash;&gt;-->
-<!--					<div class="modal-body">-->
+					<!-- Box middle -->
+					<div class="modal-body">
 
-<!--&lt;!&ndash;						<a th:href="${virustotalModel.linkToResultsSite}"> Link do skanowania </a> <br/>&ndash;&gt;-->
 <!--						Status -> <b><span th:utext="${phishermanModel.statusInfo}"> </span> </b> <br/>-->
-<!--						Zweryfikowana przez phisherman -> <b><span th:utext="${phishermanModel.verifiedPhishInfo}"> </span> </b> <br/>-->
-<!--						Kategoria -> <b><span th:utext="${phishermanModel.classificationInfo}"> </span> </b> <br/>-->
+						Zweryfikowana przez phisherman -> <b><span th:utext="${phishermanModel.verifiedPhishFromPhisherman}"> </span> </b> <br/>
+						Kategoria -> <b><span th:utext="${phishermanModel.classificationInfoFromPhisherman}"> </span> </b> <br/>
+						Brands -> <b><span th:utext="${phishermanModel.targetedBrandFromPhisherman}"> </span> </b> <br/>
 <!--						Pierwszy raz widziana -> <b><span th:utext="${phishermanModel.firstSeenInfo}"> </span> </b> <br/>-->
 <!--						Ostanio sprawdzone -> <b><span th:utext="${phishermanModel.lastCheckInfo}"> </span> </b> <br/>-->
 <!--						Ostatnio widziana -> <b><span th:utext="${phishermanModel.lastSeenInfo}"> </span> </b> <br/>-->
-<!--						phishCaught -> <b><span th:utext="${phishermanModel.phishCaughtInfo}"> </span> </b> <br/>-->
-<!--						<a th:href="${phishermanModel.websiteScreenshotInfo}"> Link do screenshota strony </a> <br/>-->
-<!--						Ip Address -> <b><span th:utext="${phishermanModel.ip_addressInfo}"> </span> </b> <br/>-->
-<!--						Nazwa kraju -> <b><span th:utext="${phishermanModel.country_nameInfo}"> </span> </b> <br/>-->
 
-<!--					</div>-->
+						phishCaught -> <b><span th:utext="${phishermanModel.phishCaughtFromPhisherman}"> </span> </b> <br/>
+						<a th:href="${phishermanModel.websiteScreenshotFromPhisherman}"> Link do screenshota strony </a> <br/>
+						Ip Address -> <b><span th:utext="${phishermanModel.ipaddressFromPhisherman}"> </span> </b> <br/>
+						Kod kraju -> <b><span th:utext="${phishermanModel.countryCodeFromPhisherman}"> </span> </b> <br/>
+						Nazwa kraju -> <b><span th:utext="${phishermanModel.countryNameFromPhisherman}"> </span> </b> <br/>
 
-<!--					&lt;!&ndash; Modal footer &ndash;&gt;-->
-<!--					<div class="modal-footer">-->
-<!--						<button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>-->
-<!--					</div>-->
+					</div>
 
-<!--				</div>-->
-<!--			</div>-->
-<!--		</div>-->
-		<!-- Central Modal Medium -->
+					<!-- Box footer -->
+					<div class="modal-footer">
+						<button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+					</div>
 
-
+				</div>
+			</div>
+		</div>
+<!--STOP Phisherman.gg BOX -->
+<!--STOP SETTING OF BOXES -->
 	</div>
 
 <!--Bootstrap integration-->
-	<!-- CSS only -->
-	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-	<!-- JavaScript Bundle with Popper -->
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+		<!-- CSS only -->
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+		<!-- JavaScript Bundle with Popper -->
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
 	</body>
 </html>
 

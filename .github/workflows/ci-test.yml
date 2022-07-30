@@ -24,7 +24,7 @@ jobs:
     - name: Build & push Docker image to public repo
       uses: mr-smithers-excellent/docker-build-push@v5
       with:
-        image: michaldurlak/urlcheck
+        image: michaldurlak/urlcheck-beta
         registry: docker.io
         tags: test
         username: ${{ secrets.DOCKER_USERNAME }}
